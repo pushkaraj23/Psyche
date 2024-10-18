@@ -10,9 +10,14 @@ const ContactUs = () => {
                 If you don’t find your question here, feel free to reach out to us via our Contact page.<br/>
                 We’re always here to help.
             </p>
-            <a href="/contact" className="inline-block border border-[#333] text-[#333] font-semibold px-8 py-4 hover:bg-[#333] hover:text-white transition-colors duration-300">
-                Contact Us for More
+            <a href="/contact" className="inline-block">
+                <button
+                    className="border border-[#333] text-[#333] font-semibold px-[4vw] py-[2vw] sm:px-[4vw] sm:py-[2vw] hover:bg-[#333] hover:text-white transition-colors duration-300"
+                >
+                    Contact Us
+                </button>
             </a>
+                
         </div>
     );
 };

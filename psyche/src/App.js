@@ -1,14 +1,13 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Services from "./pages/services"
-import ContactUs from "./components/ContactUs";
+import Main from "./pages/main";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" Component={Services} />
-        <Route path="/contact" Component={ContactUs} />
+        <Route path="/" Component={Main} />
+        
 
       </Routes>
     </Router>
