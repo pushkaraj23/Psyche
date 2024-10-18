@@ -12,4 +12,4 @@ const main = () => {
 }
 
 export default main
-// You need to import all the pages here
+// You need to import all the pages here.
