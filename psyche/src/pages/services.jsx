@@ -10,16 +10,19 @@ const Services = () => {
       title: "Psychiatry Consultations",
       description: "Personalized psychiatric consultations to diagnose and treat mental health conditions.",
       imageUrl: consultation,
+      link: "#",
     },
     {
       title: "Therapy Services",
       description: "Offering cognitive behavioral therapy, talk therapy, and more.",
       imageUrl: therapy,
+      link: "#",
     },
     {
       title: "Mental Health Workshops",
       description: "Participate in our educational workshops aimed at improving community mental well-being.",
       imageUrl: group_activity,
+      link: "#",
     }
   ];
 
@@ -34,6 +37,7 @@ const Services = () => {
             title={service.title}
             description={service.description}
             imageUrl={service.imageUrl}
+            link={service.link}
           />
         ))}
       </div>
