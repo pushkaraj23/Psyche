@@ -4,9 +4,9 @@ import React from "react";
 
 const ServiceCard = (props) => {
   return (
-    <div className="w-[24vw] h-[37vw] bg-white border border-[#d2d4a4] flex flex-col p-[3vw] justify-between items-center">
+    <div className="w-[22vw] h-[35vw] bg-white border border-[#d2d4a4] flex flex-col p-[3vw] justify-between items-center">
       <img className="w-[17.5vw]" src={props.imageUrl} alt={props.title} />
-      <h3 className="w-[17.5vw] text-[#8D8F69] text-[1.35vw] font-bold font-merriweather">
+      <h3 className="w-[17.5vw] text-[#8D8F69] text-[1.31vw] font-bold font-merriweather">
         {props.title}
       </h3>
       <p
