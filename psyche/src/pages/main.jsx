@@ -1,6 +1,5 @@
 import React from 'react'
-import Navbar from './navbar'
-// import Landing from './landing'
+import Navbar from '../components/navbar'
 import Services from './services'
 import ContactUs from '../components/ContactUs'
 import PhotoGallery from './photoGallery'
