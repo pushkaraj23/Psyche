@@ -17,7 +17,7 @@ const Landing = () => {
           <span> Health Awareness Programs.</span>
           <button className="items-center text-[#3F6F67] hover:underline gap-1 ml-2 group">
             <div className="flex flex-row items-center gap-2">
-              <span className="text-xl">Learn More</span>
+              <span className="text-lg font-bold">Learn More</span>
               <FaArrowRightLong className="text-sm transition-transform duration-300 ease-in-out group-[hover]:rotate-45" />
             </div>
           </button>
