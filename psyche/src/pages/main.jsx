@@ -6,6 +6,8 @@ import Community from "../components/Community";
 import PhotoGallery from "./photoGallery";
 import Landing from "./landing";
 import FAQs from "./FAQs";
+import Footer from './footer';
+
 
 const main = () => {
   return (
