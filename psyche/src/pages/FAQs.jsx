@@ -8,6 +8,8 @@ const FAQs = () => {
     { question: "How can I book a consultation?", answer: "We offer a variety of services including..." },
     { question: "How can I book a consultation?", answer: "We offer a variety of services including.." },
     { question: "How can I book a consultation?", answer: "We offer a variety of services including..." },
+    { question: "How can I book a consultation?", answer: "We offer a variety of services including..." },
+
   ];
 
   const toggleQuestion = (index) => {
@@ -30,10 +32,10 @@ const FAQs = () => {
 
       <div className="w-full max-w-[81vw] pt-[5vh]">
         {faqData.map((faq, index) => (
-          <div key={index} className={`${ index === 0 ? 'border-t border-b' : 'border-b' } border-[#8C7165]/30`}>
+          <div key={index} className={`${ index === 0 ? 'border-t border-b' : 'border-b' } border-[#8C7165]/30`}>{/*only the first question in the accordion has a top border and a bottom border rest of them only have a bottom border.*/}
             <button
               onClick={() => toggleQuestion(index)}
-              className="w-full text-left text-[#8C7165] text-[1.2vw] my-2 font-bold font-merriweather flex justify-between items-center"
+              className="w-full text-left text-[#8C7165] text-[1.15vw] my-2 mx-5 font-bold font-merriweather flex justify-between items-center"
             >
               {faq.question}{/* question */}
               <span className="text-[#8C7165] text-[3vw] font-bold font-merriweather">
@@ -41,7 +43,7 @@ const FAQs = () => {
               </span>
             </button>
             {openQuestion === index && (
-              <p className="text-[#8C7165]/75 text-[1.1vw]   font-merriweather my-2 transition-all duration-300">
+              <p className="text-[#8C7165]/75 text-[1.1vw]   font-merriweather my-2 mx-5 transition-all duration-300">
                 {faq.answer}{/* answer */}
               </p>
             )}
