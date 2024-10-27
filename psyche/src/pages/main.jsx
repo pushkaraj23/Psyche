@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Services from "./services";
 import ContactUs from "../components/ContactUs";
+import Community from "../components/Community";
 import PhotoGallery from "./photoGallery";
 import Landing from "./landing";
 import FAQs from "./FAQs";
@@ -12,9 +13,10 @@ const main = () => {
       <Navbar />
       <Landing />
       <Services />
-      <ContactUs />
       <PhotoGallery />
-      <FAQs/>
+      <Community />
+      <FAQs />
+      <ContactUs />
     </div>
   );
 };
