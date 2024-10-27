@@ -31,10 +31,10 @@ const PhotoGallery = () => {
   return (
     <div className="w-[100vw] h-[100vh] bg-[#6B7775] overflow-hidden relative">
       <div className="flex flex-col items-start justify-start ml-[10vw] mt-[10vh]">
-        <h1 className="text-white text-[6vw] sm:text-[4vw] lg:text-[2.5vw] font-merriweather font-bold">
+        <h1 className="text-white text-[2.5vw] font-merriweather font-bold">
           Photo Gallery
         </h1>
-        <p className="text-white/50 text-[4vw] sm:text-[2.5vw] lg:text-[1.3vw] font-merriweather mt-[1vw]">
+        <p className="text-white/50 text-[1.3vw] font-merriweather mt-[1vw]">
         Dive visually into the glimpses of our fun environment
         </p>
       </div>
@@ -45,7 +45,7 @@ const PhotoGallery = () => {
 
         {/* You can add more <GalleryImage /> components here */}
       </div>
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-10 pb-20">
         <button className="bg-transparent border border-white text-white w-[14vw] h-[10vh] shadow hover:bg-white hover:text-[#6B7775] transition-colors duration-300 text-xs">
           View More
         </button>

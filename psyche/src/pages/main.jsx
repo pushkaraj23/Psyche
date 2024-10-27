@@ -4,6 +4,7 @@ import Services from "./services";
 import ContactUs from "../components/ContactUs";
 import PhotoGallery from "./photoGallery";
 import Landing from "./landing";
+import FAQs from "./FAQs";
 
 const main = () => {
   return (
@@ -13,6 +14,7 @@ const main = () => {
       <Services />
       <ContactUs />
       <PhotoGallery />
+      <FAQs/>
     </div>
   );
 };
