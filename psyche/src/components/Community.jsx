@@ -2,10 +2,10 @@ import React from "react";
 import ContactSection from "../components/JoinContact";
 
 const ContactUs = () => {
-  const title = "Still have questions?";
+  const title = "Join the Psyche Community";
   const description =
-    "If you don’t find your question here, feel free to reach out to us via our Contact page. We’re always here to help.";
-  const buttonText = "Contact Us";
+    "Stay informed with the latest mental health tips, news, and upcoming events.";
+  const buttonText = "Sign Up For Our Newsletter";
 
   return (
     <ContactSection
