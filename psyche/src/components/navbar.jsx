@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-screen h-[10vh] border-b border-[#3F6F67] flex items-center justify-between px-[5vw] transition-all duration-300 z-50 
-        ${scrolled ? "bg-[#3F6F67]/20 backdrop-blur-md" : "bg-transparent"}
+        ${scrolled ? "bg-white/60 backdrop-blur-md" : "bg-transparent"}
         ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}
     >
       <Link to="/" className="font-merriweather text-[2.5vh] text-[#3F6F67]">
