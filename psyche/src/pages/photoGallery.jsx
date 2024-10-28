@@ -3,7 +3,7 @@ import testImg from "../assets/test.png";
 
 const GalleryImage = ({ imageUrl, text }) => {
   return (
-    <div className="relative w-[80vw] h-[80vw] sm:w-[45vw] sm:h-[45vw] md:w-[30vw] md:h-[40vh] lg:w-[23vw] lg:h-[50vh] overflow-hidden">
+    <div className="relative w-[80vw] h-[80vw] sm:w-[45vw] sm:h-[45vh] md:w-[30vw] md:h-[40vh] lg:w-[23vw] lg:h-[50vh] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#6B7775]/75 z-10" />
       <img
         className="w-full h-full object-cover rounded-lg shadow-md z-0"
