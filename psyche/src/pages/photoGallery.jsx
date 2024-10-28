@@ -3,7 +3,7 @@ import testImg from "../assets/test.png";
 
 const GalleryImage = ({ imageUrl, text }) => {
   return (
-    <div className="relative w-[80vw] h-[80vw] sm:w-[45vw] sm:h-[45vh] md:w-[30vw] md:h-[40vh] lg:w-[23vw] lg:h-[50vh] overflow-hidden">
+    <div className="relative w-[80vw] h-[40vh] sm:w-[45vw] sm:h-[45vh] md:w-[30vw] md:h-[40vh] lg:w-[23vw] lg:h-[50vh] overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#6B7775]/75 z-10" />
       <img
         className="w-full h-full object-cover rounded-lg shadow-md z-0"
@@ -11,7 +11,7 @@ const GalleryImage = ({ imageUrl, text }) => {
         alt="Gallery"
       />
       <div className="absolute bottom-2 left-4 p-4 z-20">
-        <h2 className="text-white text-sm md:text-md font-medium font-merriweather">
+        <h2 className="text-white text-xl md:text-xl font-medium font-merriweather">
           {text}
         </h2>
         <button className="mt-2 bg-transparent border border-white text-white px-4 py-2 md:px-6 md:py-2 rounded-lg shadow hover:bg-white hover:text-[#6B7775] transition-colors duration-300 text-xs">
