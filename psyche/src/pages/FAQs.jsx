@@ -32,7 +32,7 @@ const FAQs = () => {
   };
 
   return (
-    <div className="w-full sm:min-h-[60vh] min-h-[100vh]  bg-[#ECDBD3] overflow-hidden flex flex-col items-center px-5 sm:px-10 md:px-[10vw] py-[5vh] md:py-[8vh]">
+    <div className="w-full bg-[#ECDBD3] overflow-hidden flex flex-col items-center px-5 sm:px-10 md:px-[10vw] py-[5vh] md:py-[8vh]">
       <div className="flex justify-center w-full text-center">
         <div className="text-center max-w-[90vw] md:max-w-[55vw]">
           <h1 className="text-[#8C7165] text-[6vw] sm:text-[4vw] md:text-[3vw] font-merriweather font-bold">
