@@ -1,24 +1,16 @@
 import React from "react";
 import image from "../assets/image.png";
-import EnvelopeIcon from '@heroicons/react/24/outline/EnvelopeIcon';
-import PhoneIcon from '@heroicons/react/24/outline/PhoneIcon';
-import MapPinIcon from '@heroicons/react/24/outline/MapPinIcon';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 const Footer = () => {
     return (
         <div className="relative w-full h-[30vw] flex items-center justify-between px-[10vw] py-[5vw]">
-            {/* Blurred Background Image */}
-            <div
-                className="absolute inset-0 bg-cover"
+            <div className="absolute inset-0 bg-cover blur-[0.3vw] before:absolute before:inset-0 before:bg-[#717253] before:opacity-65"
                 style={{
                     backgroundImage: `url(${image})`,
-                    filter: "blur(0.3vw)",
                     zIndex: -2,
                 }}
             ></div>
-
-            {/* Green Hue Overlay */}
-            <div className="absolute inset-0 bg-[#717253] opacity-65 z-[-1]"></div>
 
             {/* Title Section */}
             <div className="relative z-10 flex-1 flex justify-center p-[10vw]">
