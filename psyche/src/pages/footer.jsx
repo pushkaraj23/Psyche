@@ -1,5 +1,4 @@
 import React from "react";
-// import Logo from "../assets/logo2.svg";
 import image from "../assets/image.png";
 import EnvelopeIcon from '@heroicons/react/24/outline/EnvelopeIcon';
 import PhoneIcon from '@heroicons/react/24/outline/PhoneIcon';
