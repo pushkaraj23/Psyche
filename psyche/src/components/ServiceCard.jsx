@@ -16,7 +16,6 @@ const ServiceCard = (props) => {
       <p className="w-full text-[#8D8F69] text-[3vw] sm:text-[1vw] text-opacity-75 font-merriweather text-start my-[2vw] sm:my-0">
         {props.description}
       </p>
-
       <button className="bg-[#8D8F69] italic py-[4%] px-4 text-[3vw] sm:text-[1vw] font-merriweather text-white rounded-sm hover:bg-white hover:text-[#8D8F69] border border-[#8D8F69] transition-colors duration-300 text-left self-start mt-[1vw]">
         <a href={props.link} className="flex justify-center">
           Learn More →
