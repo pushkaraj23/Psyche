@@ -1,61 +1,85 @@
 import React from "react";
 import image from "../assets/image.png";
 import Logo from "../assets/Logo.png";
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 const Footer = () => {
-    return (
-        <div className="relative w-full h-screen md:h-[30vw] flex flex-col md:flex-row justify-between px-[15vw] py-[15vw] md:px-[10vw] md:py-[7vw]">
-            <div className="absolute inset-0 bg-cover blur-[0.3vw] before:absolute before:inset-0 before:bg-[#717253] before:opacity-65"
-                style={{
-                    backgroundImage: `url(${image})`,
-                    zIndex: -2,
-                }}
-            ></div>
-
-            {/* Title and Logo Section */}
-            <div className="flex flex-col  gap-[3vw] items-center text-center md:flex-row md:items-start md:justify-start  md:text-left  md:gap-[3vw]">
-                <img src={Logo} alt="logo" className="w-[35vw] md:w-[14vw] md:ml-[1vw] md:my-[4vw]" />
-                <h1 className="text-white text-[7vw] md:text-[3.5vw] font-black leading-[9vw] md:leading-[4vw] my-[2vw] w-[60vw] md:w-[17vw] md:my-[4vw] font-merriweather">
-                    ONE MIND AT A TIME
-                </h1>
-            </div>
-
-            {/* Quick Links Section */}
-            <div className="flex flex-col items-center gap-[4vw] md:gap-[1vw] text-white font-light font-merriweather ">
-                <h2 className="font-bold text-white text-[5.5vw] md:text-[1.3vw] md:ml-[4vw]">Quick Links</h2>
-                <div className="grid grid-cols-2 gap-[2vw] text-[3.5vw] md:text-[1vw] md:flex md:flex-col md:gap-[1vw] ml-[12vw] mr-[5vw]">
-                    <a href="#home" className="underline">Home</a>
-                    <a href="#services" className="underline">Services</a>
-                    <a href="#awareness" className="underline">Awareness Programs</a>
-                    <a href="#knowledge" className="underline">Knowledge Base</a>
-                    <a href="#partnerships" className="underline">Partnerships</a>
-                    <a href="#contact" className="underline">Contact Us</a>
-                </div>
-            </div>
-
-            {/* Contact Information Section */}
-            <div className="flex flex-col items-center md:items-start text-white text-[3vw] md:text-[1vw] mb-[10vw] leading-[4vw] md:leading-[2.5vw] font-merriweather gap-[1vw] py-[10vw] md:mt-[-10.5vw]">
-                <h2 className="font-bold text-white text-[5.5vw] md:text-[1.3vw] mb-[3vw] md:mb-[0vw]">Contact Information</h2>
-                <p className="flex items-center text-white mb-[2vw] md:mb-[0vw]">
-                    <MapPinIcon className="w-[5vw] h-[5vw] md:w-[1.5vw] md:h-[1.5vw] mr-[1vw]" />
-                    Hadapsar, Pune - 412201
-                </p>
-                <p className="flex items-center text-white mb-[2vw] md:mb-[0vw]">
-                    <PhoneIcon className="w-[5vw] h-[5vw] md:w-[1.5vw] md:h-[1.5vw] mr-[1vw]" />
-                    +1 234 567 890
-                </p>
-                <p className="flex items-center text-white mb-[2vw] md:mb-[0vw]">
-                    <EnvelopeIcon className="w-[5vw] h-[5vw] md:w-[1.5vw] md:h-[1.5vw] mr-[1vw]" />
-                    info@psyche.com
-                </p>
-            </div>
+  return (
+    <div
+      className="w-full h-[30vw] max-sm:h-[88vh]"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="w-full h-full flex items-center justify-between bg-[#717253]/75 text-white max-sm:flex-col-reverse max-sm:justify-end max-sm:gap-[15vw]">
+        {/* Title and Logo Section */}
+        <div className="flex gap-[3vw] min-w-[50vw] justify-center max-sm:flex-col max-sm:items-center">
+          <img src={Logo} alt="logo" className="w-[14vw] m-[2vw] max-sm:w-[55vw]" />
+          <h1 className="text-white w-[17vw] text-[3.5vw] font-black leading-[4vw] my-[2vw] font-merriweather max-sm:text-center max-sm:text-[10vw] max-sm:leading-[12vw] max-sm:w-4/5">
+            ONE MIND AT A TIME
+          </h1>
         </div>
-    );
+
+        {/* Quick Links Section */}
+        <div className="flex w-[50vw] justify-evenly max-sm:flex-col max-sm:w-full max-sm:items-center max-sm:pt-[12vw]">
+          <h2 className="font-merriweather font-bold text-[4.5vw] hidden max-sm:block mb-[3vw]">
+            Quick Links
+          </h2>
+          <div className="flex flex-col text-[1.2vw] gap-[.5vw] max-sm:text-[3.5vw] max-sm:h-[12vh] max-sm:flex-wrap max-sm:gap-[2vw]">
+            <h2 className="font-bold font-merriweather text-white text-[1.4vw] max-sm:hidden">
+              Quick Links
+            </h2>
+            <a href="#home" className="hover:underline text-white/75 ml-1 mx-[5vw] mb-1 max-sm:w-[17vw] max-sm:leading-[3.8vw]">
+              Home
+            </a>
+            <a href="#services" className="hover:underline text-white/75 ml-1 mx-[5vw] mb-1 max-sm:w-[17vw] max-sm:leading-[3.8vw]">
+              Services
+            </a>
+            <a href="#awareness" className="hover:underline text-white/75 ml-1 mx-[5vw] mb-1 max-sm:w-[17vw] max-sm:leading-[3.8vw]">
+              Awareness Programs
+            </a>
+            <a href="#knowledge" className="hover:underline text-white/75 ml-1 mx-[5vw] mb-1 max-sm:w-[17vw] max-sm:leading-[3.8vw]">
+              Knowledge Base
+            </a>
+            <a
+              href="#partnerships"
+              className="hover:underline text-white/75 ml-1 mx-[5vw] mb-1 max-sm:w-[17vw] max-sm:leading-[3.8vw]"
+            >
+              Partnerships
+            </a>
+            <a href="#contact" className="hover:underline text-white/75 ml-1 mx-[5vw] mb-1 max-sm:w-[17vw] max-sm:leading-[3.8vw]">
+              Contact Us
+            </a>
+          </div>
+          <div className="flex flex-col text-[1.2vw] gap-[.5vw] max-sm:items-center max-sm:text-[3.5vw]">
+            <h2 className="font-bold text-white text-[1.4vw] font-merriweather max-sm:text-[4.5vw] max-sm:mt-[5vw] max-sm:text-center">
+              Contact Information
+            </h2>
+            <p className="flex text-white/75 max-sm:mt-[2vw]">
+              <MapPinIcon className="w-6 h-6 mr-2" />
+              Hadapsar, Pune - 412201
+            </p>
+            <p className="flex text-white/75">
+              <PhoneIcon className="w-6 h-6 mr-2" />
+              +1 234 567 890
+            </p>
+            <p className="flex text-white/75">
+              <EnvelopeIcon className="w-6 h-6 mr-2" />
+              info@psyche.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <p className="absolute w-full text-[1vw] text-white/75 h-[2vw] translate-y-[-4.5vh] text-center max-sm:text-[3vw]">
+        info@psyche.com
+      </p>
+    </div>
+  );
 };
 
 export default Footer;
-
-
-
-
