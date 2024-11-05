@@ -1,5 +1,5 @@
 import React from "react";
-import ContactSection from "../components/JoinContact";
+import ContactSection from "./JoinContact";
 
 const ContactUs = () => {
   const title = "Join the Psyche Community";
