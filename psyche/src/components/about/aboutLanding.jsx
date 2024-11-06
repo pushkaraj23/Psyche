@@ -141,7 +141,7 @@ const UserTestimonials = () => {
             </div>
 
             {/* Button */}
-            <button className="mt-[4vw] px-[3vw] py-[1.5vw] bg-[#F4F1EC] text-[#000000] text-[1.5vw] font-merriweather rounded border-[0.2vw] border-[#000000]">
+            <button className="mt-[4vw] px-[3vw] py-[1.5vw] bg-[#F4F1EC] text-[#000000] text-[1.5vw] font-merriweather border-[0.2vw] border-[#000000]">
                 Book A Consultation
             </button>
         </div>
