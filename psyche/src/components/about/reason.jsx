@@ -2,7 +2,7 @@ import React from "react";
 
 const Reason = () => {
   return (
-    <div className="w-screen min-h-screen bg-[#F4F1EC] flex flex-col justify-start items-center px-[6vw] py-[4vh]">
+    <div className="w-screen min-h-screen bg-gray-100  flex flex-col justify-start items-center px-[6vw] py-[4vh]">
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-merriweather text-[#ABAD7C] mb-[5vh] text-center">
         Why Choose Psyche?
       </h1>
