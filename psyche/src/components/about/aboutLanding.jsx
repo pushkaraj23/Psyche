@@ -4,36 +4,37 @@ import aboutBg from '../../assets/aboutbg.png'; // Correct path to your image
 import ourstory_1 from '../../assets/ourstory_1.png';
 import ourstory_2 from '../../assets/ourstory_2.png';
 import speechFrame from '../../assets/speech_frame.png';
+
 const AboutLanding = () => {
     return (
-        <div className="h-screen flex flex-col items-center bg-gray-100 py-[7.5vw]">
+        <div className="h-screen flex flex-col items-center w-screen py-[6.5vw]">
             {/* Page Title */}
-            <h1 className="text-[3vw] font-bold text-[#3F6F67] mb-[1vw]">About Psyche</h1>
+            <h1 className="text-[3vw] font-bold text-[#3F6F67] pb-[2.5vw]">About Psyche</h1>
 
             {/* Content Container */}
-            <div className="relative rounded-[4vw] overflow-hidden w-[60vw] h-[95vw]">
+            <div className="relative rounded-[4vw] overflow-hidden w-[85vw] h-[100vw]">
                 {/* Background Image */}
                 <img
                     src={aboutBg}
                     alt="Scenic background"
-                    className="w-full h-[25vw] object-cover"
+                    className="w-full h-[22vw] object-cover"
                 />
 
                 {/* Blurred Teal Section */}
-                <div className="absolute bottom-0 left-0 w-full h-[13vw] bg-[#3F6F67]/60 backdrop-blur rounded-[4vw]"></div>
+                <div className="absolute bottom-0 left-0 w-full h-[12vw] bg-[#3F6F67]/60 backdrop-blur rounded-[4vw]"></div>
 
                 {/* Two-Column Text Content */}
-                <div className="absolute bottom-0 w-full py-[1.5vw] px-[1.5vw] text-white flex">
+                <div className="absolute bottom-0 w-full py-[2vw] px-[2vw] text-white flex">
                     {/* Column 1: Heading */}
-                    <div className="w-[45%] pr-[1vw] text-center py-[2vw]">
-                        <h2 className="text-[2.3vw] font-semibold font-merriweather">
+                    <div className="w-[43vw] text-center pt-[0.5vw]">
+                        <h2 className="text-[2.5vw] font-semibold font-merriweather">
                             Empowering Minds, Building Resilience.
                         </h2>
                     </div>
 
                     {/* Column 2: Passage */}
-                    <div className="w-[55%] text-start">
-                        <p className="text-[1vw] font-merriweather pt-[2.3vw]">
+                    <div className="w-[58vw] text-start py-[1vw]">
+                        <p className="text-[1.4vw] font-merriweather">
                             Psyche is committed to enhancing mental health awareness and providing compassionate,
                             professional psychiatric care. Learn more about our journey, values, and the team behind our mission.
                         </p>
@@ -48,7 +49,7 @@ const AboutLanding = () => {
 const OurStory = () => {
     return (
         // Main container for a side-by-side layout
-        <div className="flex flex-row justify-center items-start w-screen bg-[#f8f6f3] py-[7vw] px-[13vw] gap-[1vw]">
+        <div className="flex flex-row justify-center items-start h-screen w-screen bg-[#f8f6f3] py-[7vw] px-[13vw] gap-[1vw]">
 
             {/* Left section with the title and images */}
             <div className="flex flex-col w-[40vw] gap-[2vw]">
@@ -91,6 +92,8 @@ const testimonials = [
     '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
     '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
     '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
+    '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
+    '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
     '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."'
 ];
 
@@ -99,51 +102,57 @@ const authors = [
     "Aditi M.",
     "Rahul K.",
     "Sophia L.",
-    "John D."
+    "John D.",
+    "Emily R.",
+    "Michael T."
 ];
+
 const UserTestimonials = () => {
     return (
-        <div className="flex flex-col items-center bg-[#f8f6f3] p-[10vw]">
+        <div className="flex flex-col items-center bg-[#f8f6f3] w-screen">
             {/* Title */}
-            <h2 className="text-[3vw] font-bold text-[#6B7775]">User Testimonials</h2>
+            <h2 className="text-[3vw] font-bold text-[#6B7775] m-[2.5vw]">User Testimonials</h2>
 
             {/* Testimonials Grid */}
-            <div className="grid grid-cols-3 gap-[2vw] w-[65vw]">
-                {/* Top Row with Three Testimonials */}
-                {testimonials.slice(0, 3).map((testimonial, index) => (
-                    <div key={index} className="relative flex flex-col items-center p-[2vw] text-[#4a4a4a]">
-                        {/* Testimonial Box */}
-                        <div className="bg-[#6B7775]/30 rounded-[1.5vw] w-[18vw] h-[22vw] pt-[4vw] pl-[4vw] pr-[1vw]">
-                            <p className="italic text-[1vw] text-start font-merriweather">{testimonial}</p>
-                            <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index]}
-                            </p>
-                        </div>
-                        {/* Frame Overlay */}
-                        <img src={speechFrame} alt="Speech bubble frame" className=" absolute inset-[3.3vw] w-[17vw] h-[25vw]" />
-                    </div>
-                ))}
-
-                {/* Bottom Row with Two Centered Testimonials */}
-                <div className="col-span-3 flex justify-center w-[65vw] gap-[2vw]">
-                    {testimonials.slice(3).map((testimonial, index) => (
+            <div className="grid gap-[2vw] w-[85vw] ">
+                {/* Top Row with Four Testimonials */}
+                <div className="grid grid-cols-4 gap-[2vw] mb-[2vw]">
+                    {testimonials.slice(0, 4).map((testimonial, index) => (
                         <div key={index} className="relative flex flex-col items-center p-[2vw] text-[#4a4a4a]">
                             {/* Testimonial Box */}
                             <div className="bg-[#6B7775]/30 rounded-[1.5vw] w-[18vw] h-[22vw] pt-[4vw] pl-[4vw] pr-[1vw]">
                                 <p className="italic text-[1vw] text-start font-merriweather">{testimonial}</p>
-                                <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index]}
-                                </p>
+                                <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index]}</p>
                             </div>
                             {/* Frame Overlay */}
-                            <img src={speechFrame} alt="Speech bubble frame" className=" absolute inset-[4vw] w-[17.5vw] h-[24vw]" />
+                            <img src={speechFrame} alt="Speech bubble frame" className="absolute inset-[3.3vw] w-[17vw] h-[25vw]" />
                         </div>
                     ))}
+                </div>
+
+                {/* Bottom Row with Three Centered Testimonials */}
+                <div className="flex justify-center w-full mb-[2vw]">
+                    <div className="grid grid-cols-3 gap-[2vw] w-[70vw]">
+                        {testimonials.slice(4).map((testimonial, index) => (
+                            <div key={index + 4} className="relative flex flex-col items-center p-[2vw] text-[#4a4a4a]">
+                                {/* Testimonial Box */}
+                                <div className="bg-[#6B7775]/30 rounded-[1.5vw] w-[18vw] h-[22vw] pt-[4vw] pl-[4vw] pr-[1vw]">
+                                    <p className="italic text-[1vw] text-start font-merriweather">{testimonial}</p>
+                                    <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index + 4]}</p>
+                                </div>
+                                {/* Frame Overlay */}
+                                <img src={speechFrame} alt="Speech bubble frame" className="absolute inset-[4vw] w-[17.5vw] h-[24vw]" />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 
             {/* Button */}
-            <button className="mt-[4vw] px-[3vw] py-[1.5vw] bg-[#F4F1EC] text-[#000000] text-[1.5vw] font-merriweather border-[0.2vw] border-[#000000]">
+            <button className="m-[7vw] px-[3vw] py-[1.5vw] bg-[#F4F1EC] text-[#000000] text-[1.5vw] font-merriweather border-[0.2vw] border-[#000000] hover:bg-[#000000] hover:text-[#F4F1EC] transition-colors duration-300">
                 Book A Consultation
             </button>
+
         </div>
     );
 };
