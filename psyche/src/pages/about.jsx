@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from './footer';
-import { AboutLanding, OurStory, Reason, UserTestimonials } from '../components/about/aboutLanding'
+import Reason from "../components/about/reason";
+import { AboutLanding, OurStory, UserTestimonials } from '../components/about/aboutLanding'
 import Manifesto from "../components/about/manifesto";
 const about = () => {
   return (
