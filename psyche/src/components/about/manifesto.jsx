@@ -2,7 +2,7 @@ import React from "react";
 
 const Manifesto = () => {
   return (
-    <div className="w-screen min-h-screen bg-[#F4F1EC] flex flex-col justify-center items-center px-[5vw] py-[5vh]">
+    <div className="w-screen min-h-screen bg-gray-100  flex flex-col justify-center items-center px-[5vw] py-[5vh]">
       <div className="w-full max-w-[600px] sm:max-w-[50vw] p-[5vw] sm:p-[4vw] text-center">
         <h2 className="text-3xl sm:text-4xl font-extrabold text-[#745343] font-merriweather mb-[2vh]">
           Our Mission
