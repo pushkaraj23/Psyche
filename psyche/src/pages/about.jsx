@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from './footer';
-import { AboutLanding, OurStory, Reason } from '../components/about/aboutLanding'
+import Reason from "../components/about/reason";
+import { AboutLanding, OurStory, UserTestimonials } from '../components/about/aboutLanding'
 
 const about = () => {
   return (
@@ -10,6 +11,7 @@ const about = () => {
       <AboutLanding />
       <OurStory />
       <Reason />
+      <UserTestimonials />
       <Footer />
 
     </div>

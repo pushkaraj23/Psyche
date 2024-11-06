@@ -3,7 +3,7 @@ import React from 'react';
 import aboutBg from '../../assets/aboutbg.png'; // Correct path to your image
 import ourstory_1 from '../../assets/ourstory_1.png';
 import ourstory_2 from '../../assets/ourstory_2.png';
-
+import speechFrame from '../../assets/speech_frame.png';
 const AboutLanding = () => {
     return (
         <div className="h-screen flex flex-col items-center bg-gray-100 py-[7.5vw]">
@@ -85,55 +85,69 @@ const OurStory = () => {
     );
 };
 
-const Reason = () => {
+
+const testimonials = [
+    '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
+    '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
+    '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
+    '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."',
+    '"Psyche has been a life-changing resource for me. Their team is caring, understanding, and professional."'
+];
+
+const authors = [
+    "Pushkaraj S.",
+    "Aditi M.",
+    "Rahul K.",
+    "Sophia L.",
+    "John D."
+];
+const UserTestimonials = () => {
     return (
-        <div className="w-screen min-h-screen bg-[#F4F1EC] flex flex-col justify-start items-center px-[6vw] py-[4vh]">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-merriweather text-[#ABAD7C] mb-[5vh] text-center">
-                Why Choose Psyche?
-            </h1>
+        <div className="flex flex-col items-center bg-[#f8f6f3] p-[10vw]">
+            {/* Title */}
+            <h2 className="text-[3vw] font-bold text-[#6B7775]">User Testimonials</h2>
 
-            <div className="w-full max-w-[95vw] sm:max-w-[85vw] lg:max-w-[70vw] bg-[#ABAD7C] px-[6vw] py-[4.5vw] rounded-3xl shadow-lg border-[0.75vw] border-[#d8ccb4] overflow-hidden">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div className="p-[5vw] bg-white rounded-[50px] shadow-lg text-center">
-                        <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic font-extrabold">
-                            Experienced Professionals
-                        </h2>
-                        <p className="text-gray-700 font-merriweather text-sm sm:text-base">
-                            Our team of licensed psychiatrists, therapists, and counselors is dedicated to helping you achieve mental wellness.
-                        </p>
+            {/* Testimonials Grid */}
+            <div className="grid grid-cols-3 gap-[2vw] w-[65vw]">
+                {/* Top Row with Three Testimonials */}
+                {testimonials.slice(0, 3).map((testimonial, index) => (
+                    <div key={index} className="relative flex flex-col items-center p-[2vw] text-[#4a4a4a]">
+                        {/* Testimonial Box */}
+                        <div className="bg-[#6B7775]/30 rounded-[1.5vw] w-[18vw] h-[22vw] pt-[4vw] pl-[4vw] pr-[1vw]">
+                            <p className="italic text-[1vw] text-start font-merriweather">{testimonial}</p>
+                            <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index]}
+                            </p>
+                        </div>
+                        {/* Frame Overlay */}
+                        <img src={speechFrame} alt="Speech bubble frame" className=" absolute inset-[3.3vw] w-[17vw] h-[25vw]" />
                     </div>
+                ))}
 
-                    <div className="p-[5vw] bg-white rounded-[50px] shadow-lg text-center">
-                        <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic font-extrabold">
-                            Personalized Approach
-                        </h2>
-                        <p className="text-gray-700 font-merriweather text-sm sm:text-base">
-                            We provide individualized treatment plans tailored to each client's unique needs.
-                        </p>
-                    </div>
-
-                    <div className="p-[5vw] bg-white rounded-[50px] shadow-lg text-center">
-                        <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic font-extrabold">
-                            Comprehensive Services
-                        </h2>
-                        <p className="text-gray-700 font-merriweather text-sm sm:text-base">
-                            From consultations to workshops, we cover all aspects of mental well-being, ensuring holistic support.
-                        </p>
-                    </div>
-
-                    <div className="p-[5vw] bg-white rounded-[50px] shadow-lg text-center">
-                        <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic font-extrabold">
-                            Confidential & Compassionate Care
-                        </h2>
-                        <p className="text-gray-700 font-merriweather text-sm sm:text-base">
-                            At Psyche, we prioritize your privacy and offer a supportive, non-judgmental environment for everyone.
-                        </p>
-                    </div>
+                {/* Bottom Row with Two Centered Testimonials */}
+                <div className="col-span-3 flex justify-center w-[65vw] gap-[2vw]">
+                    {testimonials.slice(3).map((testimonial, index) => (
+                        <div key={index} className="relative flex flex-col items-center p-[2vw] text-[#4a4a4a]">
+                            {/* Testimonial Box */}
+                            <div className="bg-[#6B7775]/30 rounded-[1.5vw] w-[18vw] h-[22vw] pt-[4vw] pl-[4vw] pr-[1vw]">
+                                <p className="italic text-[1vw] text-start font-merriweather">{testimonial}</p>
+                                <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index]}
+                                </p>
+                            </div>
+                            {/* Frame Overlay */}
+                            <img src={speechFrame} alt="Speech bubble frame" className=" absolute inset-[4vw] w-[17.5vw] h-[24vw]" />
+                        </div>
+                    ))}
                 </div>
             </div>
+
+            {/* Button */}
+            <button className="mt-[4vw] px-[3vw] py-[1.5vw] bg-[#F4F1EC] text-[#000000] text-[1.5vw] font-merriweather rounded border-[0.2vw] border-[#000000]">
+                Book A Consultation
+            </button>
         </div>
     );
 };
 
-export { AboutLanding, OurStory, Reason };
+
+export { AboutLanding, OurStory, UserTestimonials };
 
