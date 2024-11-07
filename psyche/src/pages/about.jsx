@@ -6,7 +6,7 @@ import { AboutLanding, OurStory, UserTestimonials } from '../components/about/ab
 import Manifesto from "../components/about/manifesto";
 const about = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <AboutLanding />
       <Manifesto />
