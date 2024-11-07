@@ -1,6 +1,6 @@
 // src/components/about/aboutLanding.jsx
 import React from 'react';
-import aboutBg from '../../assets/aboutbg.png'; // Correct path to your image
+import aboutBg from '../../assets/aboutbg.png';
 import ourstory_1 from '../../assets/ourstory_1.png';
 import ourstory_2 from '../../assets/ourstory_2.png';
 import speechFrame from '../../assets/speech_frame.png';
