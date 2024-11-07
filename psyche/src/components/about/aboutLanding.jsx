@@ -7,20 +7,22 @@ import speechFrame from '../../assets/speech_frame.png';
 
 const AboutLanding = () => {
     return (
-        <div className="h-screen flex flex-col items-center w-screen py-[6.5vw]">
+        <div className="h-screen flex flex-col items-center w-screen py-[7vw]">
             {/* Page Title */}
-            <h1 className="text-[3vw] font-bold text-[#3F6F67] pb-[2.5vw]">About Psyche</h1>
+            <h1 className="text-[6.5vw] p-[20vw] pb-[7vw] md:pt-[0vw] md:text-[3vw] font-bold text-[#3F6F67] md:pb-[2.5vw]">
+                About Psyche
+            </h1>
 
             {/* Content Container with Background Image and Blurred Overlay */}
-            <div className="relative rounded-[4vw] overflow-hidden w-[85vw] h-[100vw]">
-                <img src={aboutBg} alt="Scenic background" className="w-full h-[22vw] object-cover" />
+            <div className="relative rounded-[17vw] md:rounded-[4vw] overflow-hidden w-[80vw] md:w-[85vw] h-[140vw] md:h-[100vw]">
+                <img src={aboutBg} alt="Scenic background" className="w-full h-[90vw] md:h-[22vw] object-cover" />
 
                 {/* Blurred Teal Section with Text */}
-                <div className="absolute bottom-0 left-0 w-full p-[2vw] bg-[#3F6F67]/60 backdrop-blur rounded-[4vw] text-white flex justify-between items-center">
-                    <h2 className="w-[43vw] text-center text-[2.5vw] font-semibold font-merriweather">
+                <div className="absolute bottom-0 left-0 w-full h-[97vw] md:h-[13vw] p-[5vw] md:p-[2vw] bg-[#3F6F67]/60 backdrop-blur rounded-[17vw] md:rounded-[4vw] text-white flex flex-col md:flex-row justify-between items-center">
+                    <h2 className="w-[60vw] md:w-[43vw] text-[7.5vw] md:text-[3vw] font-semibold font-merriweather p-[1vw] md:mb-0">
                         Empowering Minds, Building Resilience.
                     </h2>
-                    <p className="w-[58vw] text-[1.4vw] font-merriweather">
+                    <p className="w-[60vw] md:w-[58vw] text-[3.5vw] md:text-[1.4vw] font-merriweather text-start md:mt-[1vw] mb-[1vw]">
                         Psyche is committed to enhancing mental health awareness and providing compassionate,
                         professional psychiatric care. Learn more about our journey, values, and the team behind our mission.
                     </p>
@@ -29,6 +31,7 @@ const AboutLanding = () => {
         </div>
     );
 };
+
 
 
 const OurStory = () => {
@@ -90,7 +93,7 @@ const UserTestimonials = () => {
             <h2 className="text-[3vw] font-bold text-[#6B7775] m-[2.5vw]">User Testimonials</h2>
 
             {/* Testimonials Grid */}
-            <div className="grid gap-[2vw] w-[85vw] ">
+            <div className="grid gap-[2vw] w-[87vw] ">
                 {/* Top Row with Four Testimonials */}
                 <div className="grid grid-cols-4 gap-[2vw] mb-[2vw]">
                     {testimonials.slice(0, 4).map((testimonial, index) => (
