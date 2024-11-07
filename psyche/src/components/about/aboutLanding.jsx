@@ -91,52 +91,52 @@ const UserTestimonials = () => {
     return (
         <div className="flex flex-col items-center bg-[#f8f6f3] w-screen">
             {/* Title */}
-            <h2 className="text-[3vw] font-bold text-[#6B7775] m-[2.5vw]">User Testimonials</h2>
+            <h2 className="text-[7vw] md:text-[3vw] font-bold text-[#6B7775] m-[2.5vw]">User Testimonials</h2>
 
             {/* Testimonials Grid */}
-            <div className="grid gap-[2vw] w-[87vw] ">
+            <div className="grid gap-[5vw] md:gap-[2vw] w-[90vw]">
                 {/* Top Row with Four Testimonials */}
-                <div className="grid grid-cols-4 gap-[2vw] mb-[2vw]">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-[5vw] md:gap-[2vw] mb-[5vw] md:mb-[3vw]">
                     {testimonials.slice(0, 4).map((testimonial, index) => (
-                        <div key={index} className="relative flex flex-col items-center p-[2vw] text-[#4a4a4a]">
+                        <div key={index} className="relative flex flex-col items-center p-[5vw] md:p-[2vw] text-[#4a4a4a]">
                             {/* Testimonial Box */}
-                            <div className="bg-[#6B7775]/30 rounded-[1.5vw] w-[18vw] h-[22vw] pt-[4vw] pl-[4vw] pr-[1vw]">
-                                <p className="italic text-[1vw] text-start font-merriweather">{testimonial}</p>
-                                <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index]}</p>
+                            <div className="bg-[#6B7775]/30 rounded-[5vw] md:rounded-[1.5vw] w-[65vw] md:w-[18vw] h-[60vw] md:h-[22vw] pt-[13vw] pl-[13vw] pr-[5vw] md:pt-[4vw] md:pl-[4vw] md:pr-[1vw] ">
+                                <p className="italic text-[3.5vw] md:text-[1vw] text-start font-merriweather">{testimonial}</p>
+                                <p className="mt-[3vw] md:mt-[1vw] text-[3.5vw] md:text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index]}</p>
                             </div>
                             {/* Frame Overlay */}
-                            <img src={speechFrame} alt="Speech bubble frame" className="absolute inset-[3.3vw] w-[17vw] h-[25vw]" />
+                            <img src={speechFrame} alt="Speech bubble frame" className="absolute inset-y-[14vw] inset-x-[20vw] md:inset-[4vw] w-[60vw] md:w-[17vw] h-[60vw] md:h-[25vw]" />
                         </div>
                     ))}
                 </div>
 
                 {/* Bottom Row with Three Centered Testimonials */}
-                <div className="flex justify-center w-full mb-[2vw]">
-                    <div className="grid grid-cols-3 gap-[2vw] w-[70vw]">
-                        {testimonials.slice(4).map((testimonial, index) => (
-                            <div key={index + 4} className="relative flex flex-col items-center p-[2vw] text-[#4a4a4a]">
-                                {/* Testimonial Box */}
-                                <div className="bg-[#6B7775]/30 rounded-[1.5vw] w-[18vw] h-[22vw] pt-[4vw] pl-[4vw] pr-[1vw]">
-                                    <p className="italic text-[1vw] text-start font-merriweather">{testimonial}</p>
-                                    <p className="mt-[1vw] pr-[1vw] text-[1vw] text-end font-semibold text-[#6B7775]">- {authors[index + 4]}</p>
-                                </div>
-                                {/* Frame Overlay */}
-                                <img src={speechFrame} alt="Speech bubble frame" className="absolute inset-[4vw] w-[17.5vw] h-[24vw]" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-[5vw] md:gap-[2vw] w-full md:w-[70vw] md:ml-[10vw]">
+                    {testimonials.slice(4).map((testimonial, index) => (
+                        <div key={index + 4} className="relative flex flex-col items-center p-[5vw] md:p-[2vw] text-[#4a4a4a]">
+                            {/* Testimonial Box */}
+                            <div className="bg-[#6B7775]/30 rounded-[5vw] md:rounded-[1.5vw] w-[65vw] md:w-[18vw] h-[60vw] md:h-[22vw] pt-[13vw] pl-[13vw] pr-[5vw] md:pt-[4vw] md:pl-[4vw] md:pr-[1vw]">
+                                <p className="italic text-[3.5vw] md:text-[1vw] text-start font-merriweather">
+                                    {testimonial}
+                                </p>
+                                <p className="mt-[3vw] md:mt-[1vw] text-[3.5vw] md:text-[1vw] text-end font-semibold text-[#6B7775]">-
+                                    {authors[index + 4]}
+                                </p>
                             </div>
-                        ))}
-                    </div>
+                            {/* Frame Overlay */}
+                            <img src={speechFrame} alt="Speech bubble frame" className="absolute inset-y-[14vw] inset-x-[20vw] md:inset-[4vw] w-[60vw] md:w-[17vw] h-[60vw] md:h-[25vw]" />
+                        </div>
+                    ))}
                 </div>
             </div>
 
             {/* Button */}
-            <button className="m-[7vw] px-[3vw] py-[1.5vw] bg-[#F4F1EC] text-[#000000] text-[1.5vw] font-merriweather border-[0.2vw] border-[#000000] hover:bg-[#000000] hover:text-[#F4F1EC] transition-colors duration-300">
+            <button className="m-[10vw] md:m-[7vw] px-[5vw] md:px-[3vw] py-[3vw] md:py-[1.5vw] bg-[#F4F1EC] text-[#000000] text-[4vw] md:text-[1.5vw] font-merriweather border-[0.5vw] md:border-[0.2vw] border-[#000000] hover:bg-[#000000] hover:text-[#F4F1EC] transition-colors duration-300">
                 Book A Consultation
             </button>
-
         </div>
     );
 };
-
 
 export { AboutLanding, OurStory, UserTestimonials };
 
