@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import Services from "./services";
+import Services_landing from "./services_landing";
 import ContactUs from "../components/main/ContactUs";
 import Community from "../components/main/Community";
 import PhotoGallery from "./photoGallery";
@@ -15,7 +15,7 @@ const main = () => {
       <Navbar />
       <Landing />
       <Welcome />
-      <Services />
+      <Services_landing />
       <PhotoGallery />
       <Community />
       <FAQs />
