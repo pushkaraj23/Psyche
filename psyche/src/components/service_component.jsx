@@ -38,7 +38,7 @@ const service_component = () => {
                     <h2 className="text-xl lg:text-[2.5vw] font-semibold text-[#745343]">
                         Psychiatry Consultations
                     </h2>
-                    <p className="text-sm lg:text-[1.5vw] lg:leading-[1.8vw]  mt-2 lg:mt-[1vw] text-[#745343]">
+                    <p className="text-sm lg:text-[1.45vw] lg:leading-[1.6.5vw]  mt-2 lg:mt-[1vw] text-[#745343]">
                         Our licensed psychiatrists provide professional consultations to diagnose and treat
                         various mental health conditions, including anxiety, depression, mood disorders, and more.
                     </p>
