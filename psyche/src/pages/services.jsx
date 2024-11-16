@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from './footer';
-import Reason from "../components/about/reason";
-import { AboutLanding, OurStory, UserTestimonials } from '../components/about/aboutLanding'
-import Manifesto from "../components/about/manifesto";
+import Service_Component from "../components/service_component"
+
 const services = () => {
     return (
         <div className="overflow-x-hidden">
             <Navbar />
+            <Service_Component />
             <Footer />
 
         </div>
