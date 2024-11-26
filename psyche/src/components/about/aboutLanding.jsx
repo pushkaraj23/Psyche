@@ -7,7 +7,7 @@ import speechFrame from '../../assets/speech_frame.png';
 
 const AboutLanding = () => {
     return (
-        <div className="h-screen flex flex-col items-center w-screen py-[7vw]">
+        <div className="h-screen flex flex-col items-center w-screen py-[7vw] bg-[#f8f6f3]">
             {/* Page Title */}
             <h1 className="text-[6.5vw] p-[20vw] pb-[7vw] md:pt-[0vw] md:text-[3vw] font-bold text-[#3F6F67] md:pb-[2.5vw]">
                 About Psyche
