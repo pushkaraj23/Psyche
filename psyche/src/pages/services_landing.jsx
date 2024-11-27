@@ -30,11 +30,11 @@ const Services_landing = () => {
   ];
 
   return (
-    <div className="py-[10vh] bg-[#F4F1EC] px-5 md:px-[10vw]">
-      <h1 className="text-[#717253] text-[6vw] sm:text-[4vw] md:text-[3vw] font-bold font-merriweather text-center">
+    <div className="py-[10vh] bg-[#717253] px-5 md:px-[10vw]">
+      <h1 className="text-[#FFFFFF] text-[6vw] sm:text-[4vw] md:text-[3vw] font-bold font-merriweather text-center">
         Our Core Services
       </h1>
-      <h2 className="text-[#ABAD7C] text-[4vw] sm:text-[3vw] md:text-[2vw] font-merriweather text-center mb-[4vh]">
+      <h2 className="text-[#FFFFFF] text-[4vw] sm:text-[3vw] md:text-[2vw] font-merriweather text-center mb-[4vh]">
         A glimpse at the core services we provide
       </h2>
 
