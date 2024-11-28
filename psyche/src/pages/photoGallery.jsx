@@ -4,37 +4,45 @@ import test2 from "../assets/test2.png"; // New image for the popup
 
 const GalleryImage = ({ imageUrl, text, onOpen }) => {
   return (
-    <div className="relative w-[80vw] h-[40vh] sm:w-[45vw] sm:h-[45vh] md:w-[30vw] md:h-[40vh] lg:w-[23vw] lg:h-[50vh] overflow-hidden">
-      {/* Image with Rounded Corners */}
-      <img
-        className="w-full h-full object-cover rounded-[2vw] shadow-md z-0"
-        src={imageUrl}
-        alt="Gallery"
-      />
-      {/* Content Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#6B7775] z-10 rounded-[1.5vw]" />
+    <div className="relative w-[80vw] lg:w-[23vw] overflow-hidden">
+      {/* Card Container */}
+      <div className="relative w-full h-[40vh] lg:h-[55vh]">
+        {/* Image with Rounded Corners */}
+        <img
+          className="w-full h-full object-cover rounded-[3vw] lg:rounded-[1.5vw] rounded-b-[1vw] lg:rounded-b-[0.5vw]"
+          src={imageUrl}
+          alt="Gallery"
+        />
+        {/* Content Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#6B7775] rounded-[2vw] rounded-b-[0.5vw]" />
 
-      <div className="absolute bottom-2 left-4 p-4 z-20">
-        <h2 className="text-white text-xl md:text-xl font-medium font-merriweather">
-          {text}
-        </h2>
-        <button
-          className="mt-2 bg-transparent border border-white text-white px-4 py-2 md:px-6 md:py-2 rounded-lg shadow hover:bg-white hover:text-[#6B7775] transition-colors duration-300 text-xs"
-          onClick={onOpen} // Trigger the modal on button click
-        >
-          Open
-        </button>
+        {/* Content */}
+        <div className="absolute bottom-[2vw] left-[1vw] p-[1.3vw] lg:px-[1.3vw] lg:py-[0vw] ">
+          <h2 className="text-white text-xl lg:text-[1.45vw]  font-medium font-merriweather">
+            {text}
+          </h2>
+          <button
+            className="italic mt-[1vw] bg-transparent border border-white text-white px-4 py-2 lg:px-[2vw] rounded-lg shadow hover:bg-white hover:text-[#6B7775] transition-colors duration-300 text-xs"
+            onClick={onOpen} // Trigger the modal on button click
+          >
+            Open
+          </button>
+        </div>
       </div>
+
+      {/* Dark Bottom Border */}
+      <div className="w-full h-[2vw] lg:h-[1vw] bg-[#ffffff] rounded-b-[3vw] lg:rounded-b-[2vw] shadow-xl"></div>
     </div>
-
-
   );
 };
 
 const Modal = ({ activeCard, images, onClose, onNext, onPrev }) => {
   return (
-    <div className="fixed inset-0 z-50  backdrop-blur-[0.2vw] flex justify-center items-center">
-      <div className="relative bg-black bg-opacity-75 rounded-[4vw] p-[10vw] lg:p-[5vw] w-[95vw] h-[95vh] flex flex-col">
+    <div className="fixed inset-0 z-50 flex justify-center items-center">
+      {/* Background Overlay */}
+      <div className="absolute inset-0 backdrop-blur-[0.15vw] bg-gradient-to-br from-[rgba(255,255,255,0.56)] to-[rgba(0,0,0,0.92)]"></div>
+
+      <div className="relative bg-black bg-opacity-75 rounded-[4vw] lg:rounded-[1.5vw] p-[10vw] lg:p-[5vw] w-[95vw] h-[95vh] flex flex-col">
         {/* Close Button */}
         <button
           className="absolute top-[4vw] lg:top-[1vw] right-[4vw] lg:right-[2vw] text-white lg:text-[2vw] font-bold"
@@ -44,44 +52,47 @@ const Modal = ({ activeCard, images, onClose, onNext, onPrev }) => {
         </button>
 
         {/* Top Section (Heading and Image Row) */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:px-[5vw]">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:pl-[6vw]">
           {/* Heading (Left Side) */}
-          <div className="lg:w-[30vw]">
-            <h2 className=" text-[8vw] lg:text-[3.5vw] font-semibold text-left text-white font-merriweather py-[5vw]">
+          <div className="lg:w-[30vw] lg:mr-[4vw]">
+            <h2 className="text-[8vw] lg:text-[3.5vw] font-bold text-left text-white font-merriweather py-[5vw]">
               {images[activeCard].text}
             </h2>
           </div>
 
-          {/* Image and Navigation (Right Side) */}
-          <div className="relative w-[40vw] h-full flex items-center justify-center ">
-            {/* Navigation Arrow (Left) */}
-            <button
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 text-[3vw] font-bold text-white z-10"
-              onClick={onPrev}
-            >
-              &lt;
-            </button>
-
+          {/* Image and Navigation Section */}
+          <div className="relative flex flex-col items-center justify-center w-full lg:w-[50vw]">
             {/* Image */}
             <img
               src={test2} // Always use test2 for all popups
               alt="Gallery Modal"
-              className="w-[80%] h-auto object-cover rounded-[3vw]"
+              className="w-[70vw] lg:w-[35vw] lg:h-[25vw] h-[80vw] object-cover rounded-[3vw] mb-[3vw] lg:mb-[-2vw] lg:ml-[3vw]"
             />
 
-            {/* Navigation Arrow (Right) */}
-            <button
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 text-[3vw] font-bold text-white z-10"
-              onClick={onNext}
-            >
-              &gt;
-            </button>
+            {/* Navigation Arrows (Below Image for Mobile, Inline for Laptop) */}
+            <div className="flex justify-between items-center w-full lg:w-auto lg:absolute lg:top-1/2 lg:transform lg:-translate-y-1/2">
+              {/* Left Arrow */}
+              <button
+                className="text-[7vw] mt-[3vw] lg:text-[3vw] font-bold text-white absolute left-[25vw] lg:absolute lg:left-[-19.5vw]"
+                onClick={onPrev}
+              >
+                &lt;
+              </button>
+
+              {/* Right Arrow */}
+              <button
+                className="text-[7vw] mt-[3vw] lg:text-[3vw] font-bold text-white absolute lg:absolute right-[25vw] lg:left-[20vw]"
+                onClick={onNext}
+              >
+                &gt;
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Bottom Section (Description Text) */}
-        <div className="mt-[6vw] px-[5vw]">
-          <p className="text-white text-[1.3vw] italic text-start">
+        <div className="mt-[8vw] lg:mt-[7vw] px-[1vw] lg:px-[2.5vw]">
+          <p className="text-white text-[4vw] lg:text-[1.5vw] italic text-start">
             "Our mission at Psyche is to break down the stigma surrounding mental
             health and provide accessible, high-quality mental health care to
             individuals and communities. We aim to foster a society where mental
@@ -93,6 +104,7 @@ const Modal = ({ activeCard, images, onClose, onNext, onPrev }) => {
     </div>
 
 
+
   );
 };
 
@@ -102,11 +114,11 @@ const PhotoGallery = () => {
   const [activeCard, setActiveCard] = useState(0);
 
   const images = [
-    { imageUrl: testImg, text: "Mindful Techniques to Manage Stress" },
-    { imageUrl: testImg, text: "Mindful Techniques to Manage Stress" },
-    { imageUrl: testImg, text: "Mindful Techniques to Manage Stress" },
-    { imageUrl: testImg, text: "Mindful Techniques to Manage Stress" },
-    { imageUrl: testImg, text: "Mindful Techniques to Manage Stress" },
+    { imageUrl: testImg, text: "Mindful living Techniques to Manage Stress" },
+    { imageUrl: testImg, text: "Mindful living Techniques to Manage Stress" },
+    { imageUrl: testImg, text: "Mindful living Techniques to Manage Stress" },
+    { imageUrl: testImg, text: "Mindful living Techniques to Manage Stress" },
+    { imageUrl: testImg, text: "Mindful living Techniques to Manage Stress" },
   ];
 
   const visibleImages = showAll ? images : images.slice(0, 3);
@@ -131,16 +143,16 @@ const PhotoGallery = () => {
 
   return (
     <div className="w-full h-full bg-[#F4F1EC] overflow-hidden relative">
-      <div className="flex flex-col lg:flex-row items-center px-[10vw] sm:px-[8vw] md:px-[10vw] mt-[10vh] sm:mt-[6vh] lg:mt-[8vh]">
-        <h1 className="text-[#6B7775] font-bold text-[9vw] sm:text-[6vw] text-start md:text-[4vw] lg:text-[2.5vw] font-merriweather lg:px-[2vw]">
+      <div className="flex flex-col lg:flex-row items-center px-[10vw] lg:px-[10vw] mt-[10vh] lg:mt-[4vw]">
+        <h1 className="text-[#6B7775] font-bold text-[9vw] text-start lg:text-[2.5vw] font-merriweather pr-[18.5vw] lg:px-[2vw]">
           Photo Gallery
         </h1>
-        <p className="text-[#6B7775] text-[4vw] sm:text-[3vw] text-left md:text-[2vw] lg:text-[1.3vw] font-merriweather lg:mt-[1vw]">
+        <p className="text-[#6B7775] text-[4vw] text-left lg:text-[1.3vw] font-merriweather lg:mt-[1vw]">
           Dive visually into the glimpses of our fun environment
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center lg:justify-center gap-[10vw] lg:gap-[3vw] px-5 sm:px-[8vw] md:px-[10vw] mt-[4vh] sm:mt-[6vh]">
+      <div className="flex flex-wrap justify-center lg:justify-center gap-[10vw] lg:gap-[3vw] px-5 mt-[4vh] lg:mt-[4vw]">
         {visibleImages.map((image, index) => (
           <GalleryImage
             key={index}
@@ -151,10 +163,10 @@ const PhotoGallery = () => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-[10vw] sm:mt-10 pb-12 sm:pb-20">
+      <div className="flex justify-center mt-[10vw] lg:mt-[3.5vw] pb-12 sm:pb-[5vw]">
         <button
           onClick={() => setShowAll((prev) => !prev)}
-          className="bg-transparent border border-black text-black w-[45vw] h-[15vw] sm:w-[30vw] sm:h-[8vh] md:w-[18vw] lg:w-[15vw] lg:h-[8vh] shadow hover:bg-black hover:text-white transition-colors duration-300 text-[5vw] lg:text-[1.3vw]"
+          className="bg-transparent border border-black text-black w-[45vw] h-[15vw] lg:w-[15vw] lg:h-[8vh] shadow hover:bg-black hover:text-white transition-colors duration-300 text-[5vw] lg:text-[1.3vw]"
         >
           {showAll ? "Show Less" : "View More"}
         </button>
