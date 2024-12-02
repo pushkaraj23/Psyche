@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { IoIosClose } from "react-icons/io";
@@ -83,12 +83,12 @@ const Navbar = () => {
         >
           Services
         </Link>
-        <Link
+        {/* <Link
           to="/awareness"
           className="font-poppins text-[1.8vh] text-[#3F6F67] hover:text-[#3F6F67]/80 transition-colors"
         >
           Awareness Programs
-        </Link>
+        </Link> */}
         <Link
           to="/contact"
           className="font-poppins text-[1.8vh] text-white bg-[#3F6F67] px-[2vw] py-[1vh] rounded-md 
