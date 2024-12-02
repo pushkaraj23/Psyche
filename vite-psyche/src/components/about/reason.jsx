@@ -1,5 +1,3 @@
-import React from "react";
-
 const Reason = () => {
   return (
     <div className="w-screen min-h-screen bg-[#f8f6f3] flex flex-col justify-start items-center px-[6vw] py-[20vh]">
@@ -20,17 +18,17 @@ const Reason = () => {
           </div>
 
           <div className="p-[5vw] bg-white rounded-[50px] shadow-lg text-center">
-            <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic font-extrabold">
+            <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic">
               Personalized Approach
             </h2>
             <p className="text-gray-700 font-merriweather text-sm sm:text-base">
               We provide individualized treatment plans tailored to each
-              client's unique needs.
+              client&apos;s unique needs.
             </p>
           </div>
 
           <div className="p-[5vw] bg-white rounded-[50px] shadow-lg text-center">
-            <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic font-extrabold">
+            <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic">
               Comprehensive Services
             </h2>
             <p className="text-gray-700 font-merriweather text-sm sm:text-base">
@@ -40,7 +38,7 @@ const Reason = () => {
           </div>
 
           <div className="p-[5vw] bg-white rounded-[50px] shadow-lg text-center">
-            <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic font-extrabold">
+            <h2 className="text-xl sm:text-2xl font-bold font-merriweather mb-3 italic">
               Confidential & Compassionate Care
             </h2>
             <p className="text-gray-700 font-merriweather text-sm sm:text-base">
