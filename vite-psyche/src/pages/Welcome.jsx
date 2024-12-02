@@ -1,5 +1,5 @@
-import React from 'react';
-import Welcome from "../assets/welcome.png"
+import Welcome from "../assets/welcome.png";
+import { Link } from "react-router-dom";
 
 const WelcomeSection = () => {
   return (
@@ -20,21 +20,24 @@ const WelcomeSection = () => {
             Welcome to Psyche
           </h1>
           <p className="text-[4.2vw] md:text-[1.5vw] font-merriweather text-black mb-[4vw] md:mb-6 text-center md:text-left">
-            At Psyche, we believe in the power of mental well-being. Our team of experienced
-            psychiatrists and mental health professionals is dedicated to providing personalized care,
-            helping individuals and communities overcome mental health challenges. Whether you’re
-            seeking professional consultation or looking to engage in awareness programs, we are here
-            to support your journey toward a healthier mind.
+            At Psyche, we believe in the power of mental well-being. Our team of
+            experienced psychiatrists and mental health professionals is
+            dedicated to providing personalized care, helping individuals and
+            communities overcome mental health challenges. Whether you’re
+            seeking professional consultation or looking to engage in awareness
+            programs, we are here to support your journey toward a healthier
+            mind.
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="border-2 border-black text-black text-[4vw] md:text-[1.3vw] font-merriweather w-[60vw] md:w-[25vw] py-[3.7vw] md:py-[1.4vw]">
-              Discover Our Services
-            </button>
+            <Link to="/services">
+              <button className="border-2 border-black text-black text-[4vw] md:text-[1.3vw] font-merriweather w-[60vw] md:w-[25vw] py-[3.7vw] md:py-[1.4vw]">
+                Discover Our Services
+              </button>
+            </Link>
           </div>
         </div>
       </div>
     </section>
-
   );
 };
 

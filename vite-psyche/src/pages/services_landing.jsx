@@ -1,4 +1,3 @@
-import React from "react";
 import ServiceCard from "../components/main/ServiceCard.jsx";
 import consultation from "../assets/consultation.png";
 import group_activity from "../assets/group_activity.png";
@@ -11,21 +10,21 @@ const Services_landing = () => {
       description:
         "Personalized psychiatric consultations to diagnose and treat mental health conditions.",
       imageUrl: consultation,
-      link: "#",
+      link: "/services",
     },
     {
       title: "Therapy Services",
       description:
         "Offering cognitive behavioral therapy, talk therapy, and more.",
       imageUrl: therapy,
-      link: "#",
+      link: "/services",
     },
     {
       title: "Mental Health Workshops",
       description:
         "Participate in our educational workshops aimed at improving community mental well-being.",
       imageUrl: group_activity,
-      link: "#",
+      link: "/services",
     },
   ];
 

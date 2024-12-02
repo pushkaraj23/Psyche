@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactLenis } from "lenis/react";
 import Navbar from "../components/navbar";
 import ServicesLanding from "./services_landing";
 import ContactUs from "../components/main/ContactUs";
@@ -6,12 +6,12 @@ import Community from "../components/main/Community";
 import PhotoGallery from "./photoGallery";
 import Landing from "./landing";
 import FAQs from "./FAQs";
-import Footer from './footer';
-import Welcome from './Welcome';
+import Footer from "./footer";
+import Welcome from "./Welcome";
 
 const main = () => {
   return (
-    <div>
+    <ReactLenis root>
       <Navbar />
       <Landing />
       <Welcome />
@@ -21,7 +21,7 @@ const main = () => {
       <FAQs />
       <ContactUs />
       <Footer />
-    </div>
+    </ReactLenis>
   );
 };
 

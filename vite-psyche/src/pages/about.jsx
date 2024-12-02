@@ -1,21 +1,26 @@
-import React from "react";
 import Navbar from "../components/navbar";
-import Footer from './footer';
+import Footer from "./footer";
 import Reason from "../components/about/reason";
-import { AboutLanding, OurStory, UserTestimonials } from '../components/about/aboutLanding'
+import {
+  AboutLanding,
+  OurStory,
+  UserTestimonials,
+} from "../components/about/aboutLanding";
 import Manifesto from "../components/about/manifesto";
+import ReactLenis from "lenis/react";
 const about = () => {
   return (
-    <div className="overflow-x-hidden">
-      <Navbar />
-      <AboutLanding />
-      <Manifesto />
-      <OurStory />
-      <Reason />
-      <UserTestimonials />
-      <Footer />
-
-    </div>
+    <ReactLenis root>
+      <div className="overflow-x-hidden">
+        <Navbar />
+        <AboutLanding />
+        <Manifesto />
+        <OurStory />
+        <Reason />
+        <UserTestimonials />
+        <Footer />
+      </div>
+    </ReactLenis>
   );
 };
 

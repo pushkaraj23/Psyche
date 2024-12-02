@@ -1,18 +1,18 @@
-import React from "react";
 import Navbar from "../components/navbar";
-import Footer from './footer';
+import Footer from "./footer";
 import ContactForm from "../components/contact_form";
-
+import ReactLenis from "lenis/react";
 
 const contact = () => {
-    return (
-        <div className="overflow-x-hidden">
-            <Navbar />
-            <ContactForm/>
-            <Footer />
-
-        </div>
-    );
+  return (
+    <ReactLenis root>
+      <div className="overflow-x-hidden">
+        <Navbar />
+        <ContactForm />
+        <Footer />
+      </div>
+    </ReactLenis>
+  );
 };
 
 export default contact;

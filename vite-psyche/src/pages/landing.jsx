@@ -1,6 +1,7 @@
 import React from "react";
 
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -17,16 +18,20 @@ const Landing = () => {
         <p className="text-lg md:text-xl max-w-lg ">
           Expert Psychiatry Consultations and Mental <br />
           <span> Health Awareness Programs.</span>
-          <button className="items-center text-[#3F6F67] hover:underline gap-1 ml-2 group">
-            <div className="flex flex-row items-center gap-2">
-              <span className="text-lg font-bold">Learn More</span>
-              <FaArrowRightLong className="text-sm transition-transform duration-300 ease-in-out group-[hover]:rotate-45" />
-            </div>
-          </button>
+          <Link to="/about">
+            <button className="items-center text-[#3F6F67] hover:underline gap-1 ml-2 group">
+              <div className="flex flex-row items-center gap-2">
+                <span className="text-lg font-bold">Learn More</span>
+                <FaArrowRightLong className="text-sm transition-transform duration-300 ease-in-out group-[hover]:rotate-45" />
+              </div>
+            </button>
+          </Link>
         </p>
-        <button className="bg-[#2f4f4f] text-white font-semibold italic px-6 py-3 w-60 rounded-md hover:bg-opacity-90">
-          Book a consultation
-        </button>
+        <Link to="/contact">
+          <button className="bg-[#2f4f4f] text-white font-semibold italic px-6 py-3 w-60 rounded-md hover:bg-opacity-90">
+            Book a consultation
+          </button>
+        </Link>
       </div>
     </div>
   );
