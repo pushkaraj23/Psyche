@@ -9,7 +9,7 @@ const Home = () => {
 
       {/* Landing Section */}
       <div
-        className="h-screen bg-cover bg-center"
+        className="h-[100vh] w-full bg-cover bg-center"
         style={{ backgroundImage: "url('/image.png')" }}
       >
         <div className="absolute inset-0 bg-[#e0f7ef] opacity-50"></div>
