@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 import Footer from "./footer";
 import Service_Component from "../components/service_component";
 
-const services = () => {
+const Services = () => {
   return (
     <div className="overflow-x-hidden">
       <Navbar />
@@ -13,4 +13,4 @@ const services = () => {
   );
 };
 
-export default services;
+export default Services;
