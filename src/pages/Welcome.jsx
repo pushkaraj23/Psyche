@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome from "../assets/welcome.png"
+import Welcome from "/assets/welcome.png"
 
 const WelcomeSection = () => {
   return (

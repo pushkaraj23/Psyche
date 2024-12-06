@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import testImg from "../assets/test.png"; // Default image for cards
-import test2 from "../assets/test2.png"; // New image for the popup
+import testImg from "/assets/test.png"; // Default image for cards
+import test2 from "/assets/test2.png"; // New image for the popup
 
 const GalleryImage = ({ imageUrl, text, onOpen }) => {
   return (

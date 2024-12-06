@@ -1,8 +1,8 @@
 import React from "react";
-import imageStrip from "../assets/imageStrip.png";
-import numberOneImage from "../assets/numberOneImage.png";
-import numberTwoImage from "../assets/numberTwoImage.png";
-import numberThreeImage from "../assets/numberThreeImage.png";
+import imageStrip from "/assets/imageStrip.png";
+import numberOneImage from "/assets/numberOneImage.png";
+import numberTwoImage from "/assets/numberTwoImage.png";
+import numberThreeImage from "/assets/numberThreeImage.png";
 
 const service_component = () => {
     return (

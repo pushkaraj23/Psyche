@@ -1,6 +1,6 @@
 import React from 'react';
-import image1 from '../assets/image_1.png';
-import image2 from '../assets/image_2.png';
+import image1 from '/assets/image_1.png';
+import image2 from '/assets/image_2.png';
 
 const ContactForm = () => {
     return (

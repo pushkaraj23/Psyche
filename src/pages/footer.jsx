@@ -1,5 +1,5 @@
-import image from "../assets/image.png";
-import Logo from "../assets/Logo.png";
+import image from "/assets/image.png";
+import Logo from "/assets/Logo.png";
 import { FaEnvelope, FaPhoneAlt, FaMapPin } from "react-icons/fa";
 
 const Footer = () => {
