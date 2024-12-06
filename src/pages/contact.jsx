@@ -4,7 +4,7 @@ import Footer from './footer';
 import ContactForm from "../components/contact_form";
 
 
-const contact = () => {
+const Contact = () => {
     return (
         <div className="overflow-x-hidden">
             <Navbar />
@@ -15,4 +15,4 @@ const contact = () => {
     );
 };
 
-export default contact;
+export default Contact;

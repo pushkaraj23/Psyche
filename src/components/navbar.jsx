@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-screen h-[10vh] border-b border-[#3F6F67] flex items-center justify-between px-[5vw] transition-all duration-300 z-50 
+      className={`fixed top-0 w-[100vw] left-0 h-[10vh] border-b border-[#3F6F67] flex items-center justify-between px-[5vw] transition-all duration-300 z-50 
         ${scrolled ? "bg-white/60 backdrop-blur-md" : "bg-transparent"}
         ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}
     >

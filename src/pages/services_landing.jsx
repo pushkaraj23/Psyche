@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceCard from "../components/main/ServiceCard.jsx";
+import ServiceCard from "../components/home/ServiceCard.jsx";
 import consultation from "../assets/consultation.png";
 import group_activity from "../assets/group_activity.png";
 import therapy from "../assets/therapy.png";
