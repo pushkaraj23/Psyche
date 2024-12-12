@@ -1,23 +1,23 @@
 import image from "/assets/image.png";
-import Logo from "/assets/Logo.png";
+import Logo from "/assets/logo-main.svg";
 import { FaEnvelope, FaPhoneAlt, FaMapPin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <div
-      className="w-full h-[30vw] max-sm:h-[88vh]"
+      className="w-full h-[30vw] max-sm:h-[100vh]"
       style={{
         backgroundImage: `url(${image})`,
         backgroundSize: "cover",
       }}
     >
-      <div className="w-full h-full flex items-center justify-between bg-[#717253]/75 text-white max-sm:flex-col-reverse max-sm:justify-end max-sm:gap-[15vw]">
+      <div className="w-full h-full flex items-center justify-between bg-[#717253]/75 text-white max-sm:flex-col-reverse max-sm:justify-end max-sm:gap-[10vw]">
         {/* Title and Logo Section */}
-        <div className="flex gap-[3vw] min-w-[50vw] justify-center max-sm:flex-col max-sm:items-center">
+        <div className="flex gap-[3vw] min-w-[50vw] justify-center items-center max-sm:flex-col max-sm:gap-[7vw] max-sm:mt-4">
           <img
             src={Logo}
             alt="logo"
-            className="w-[14vw] m-[2vw] max-sm:w-[55vw]"
+            className="h-[40vh] m-[2vw] max-sm:h-[70vw] max-sm:m-0"
           />
           <h1 className="text-white w-[17vw] text-[3.5vw] font-black leading-[4vw] my-[2vw] font-merriweather max-sm:text-center max-sm:text-[10vw] max-sm:leading-[12vw] max-sm:w-4/5">
             ONE MIND AT A TIME
@@ -74,11 +74,11 @@ const Footer = () => {
             <h2 className="font-bold text-white text-[1.4vw] font-merriweather max-sm:text-[4.5vw] max-sm:mt-[5vw] max-sm:text-center">
               Contact Information
             </h2>
-            <p className="flex text-white/75 max-sm:mt-[2vw]">
+            <p className="flex text-white/75 max-sm:my-[2vw]">
               <FaMapPin className="w-6 h-6 mr-2" />
               Hadapsar, Pune - 412201
             </p>
-            <p className="flex text-white/75">
+            <p className="flex text-white/75 max-sm:mb-[2vw]">
               <FaPhoneAlt className="w-6 h-6 mr-2" />
               +1 234 567 890
             </p>

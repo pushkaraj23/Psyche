@@ -44,7 +44,7 @@ const Navbar = () => {
     >
       <Link
         to="/"
-        className="font-merriweather text-[3vh] font-semibold text-[#3F6F67] flex gap-4 items-center"
+        className="font-merriweather text-[3vh] font-semibold text-[#3F6F67] flex gap-4 items-center max-sm:text-[2.4vh]"
       >
         <img src={Logo} alt="logo" className="h-[7vh]" />
         The Psyche Project
@@ -72,28 +72,28 @@ const Navbar = () => {
       <div className="hidden md:flex items-center gap-[3vw]">
         <Link
           to="/"
-          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group"
+          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group mt-1"
         >
           Home
           <div className="w-0 group-hover:w-full bg-[#3F6F67] h-[1px] duration-200" />
         </Link>
         <Link
           to="/about"
-          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group"
+          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group mt-1"
         >
           About
           <div className="w-0 group-hover:w-full bg-[#3F6F67] h-[1px] duration-200" />
         </Link>
         <Link
           to="/services"
-          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group"
+          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group mt-1"
         >
           Services
           <div className="w-0 group-hover:w-full bg-[#3F6F67] h-[1px] duration-200" />
         </Link>
         <Link
           to="/awareness"
-          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group"
+          className="font-merriweather text-[1.8vh] text-[#3F6F67] transition-all duration-200 group mt-1"
         >
           Awareness Programs
           <div className="w-0 group-hover:w-full bg-[#3F6F67] h-[1px] duration-200" />
@@ -105,11 +105,11 @@ const Navbar = () => {
         >
           Contact Us
         </Link>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="flex flex-col items-center absolute top-[10vh] left-0 w-full bg-[#F4F1EC] md:hidden py-[2vh]">
+        <div
+          className={`flex-col transition-all duration-200 overflow-x-hidden ${
+            menuOpen ? "h-auto flex" : "h-0 hidden"
+          } items-center absolute top-[10vh] left-0 w-full bg-[#F4F1EC] py-[2vh]`}
+        >
           <Link
             to="/"
             className="font-merriweather text-[1.8vh] text-[#3F6F67] hover:text-white hover:bg-[#3F6F67]/80 w-full transition-colors py-2 text-center"
@@ -142,7 +142,9 @@ const Navbar = () => {
             Contact Us
           </Link>
         </div>
-      )}
+      </div>
+
+      {/* Mobile Menu */}
     </nav>
   );
 };
